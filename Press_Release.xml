@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : Press_Release.xml
+    Created on : 8 Октябрь 2010 г., 13:40
+    Author     : lubyagin sergey
+    Description:
+        Purpose of the document follows.
+-->
+
+<root>
+    <rule rname="add">
+        <action>http://www.press-release.ru/add/</action>
+        <method>POST</method>
+        <parameters>
+            <field htmlname='add[author]' htmltype='text' required='true'>
+                <userdataproject name='fam'></userdataproject>
+                <userdataproject name='name'></userdataproject>
+                <userdataproject name='otch'></userdataproject>
+            </field>>
+            <field htmlname='add[org]' htmltype='text' required='true'>
+                <userdataproject name='firma'></userdataproject>
+            </field>
+            <field htmlname='add[contacts]' htmltype='text' required='false'>
+                <userdataproject name='address'></userdataproject>
+            </field>
+            <field htmlname='add[email]' htmltype='text' required='false'>
+                <userdataproject name='email'></userdataproject>
+            </field>
+            <field htmlname='add[title]' htmltype='text' required='true'>
+                <userdataproject name='title'></userdataproject>
+            </field>
+            <field htmlname='add[annot]' htmltype='textarea' maxsize='250' required='false'>
+                <userdataproject name='annotation'></userdataproject>
+            </field>
+            <field htmlname='add[bodytext]' htmltype='textarea' required='true'>
+                <userdataproject name='text'></userdataproject>
+            </field>
+            <field htmlname='add[keywords]' htmltype='textarea' maxsize='250' required='true'>
+                <userdataproject name='keywords'></userdataproject>
+            </field>
+            <field htmlname='add[url]' htmltype='text' required='false'>
+                <userdataproject name='link'></userdataproject>
+            </field>
+            <field htmlname='add[url_name]' htmltype='text' required='false'>
+                <userdataproject name='anchor'></userdataproject>
+            </field>            
+            <field htmlname='section' htmltype='select' required='true'></field>
+            <field htmlname='code' htmltype='text' required='true'></field>
+        </parameters>
+    </rule>
+
+    <rule rname="test">
+        <action>http://test/</action>
+        <method>TEST</method>
+        <parameters>
+            <field htmlname='add[url_name]' htmltype='text' required='false'>
+                <userdataproject name='anchor'></userdataproject>
+            </field>
+            <field htmlname='section' htmltype='select' required='true'></field>
+            <field htmlname='code' htmltype='text' required='true'></field>
+        </parameters>
+    </rule>
+
+    <rule rname="test222">
+        <action>http://test222/</action>
+        <method>TEST23</method>
+        <parameters>
+        </parameters>
+    </rule>
+
+</root>
